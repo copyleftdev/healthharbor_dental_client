@@ -14,10 +14,14 @@ class DentalInquiry:
         return DentalInquiry(**data)
 
 class DentalInquiryResponse:
+    def __init__(self, id: str, status: str):
+        self.id = id
+        self.status = status
+
     @staticmethod
     def parse(data: Dict[str, Any]) -> 'DentalInquiryResponse':
         """Parse JSON data to create a DentalInquiryResponse object."""
-        return DentalInquiryResponse(**data)
+        return DentalInquiryResponse(id=data['id'], status=data['status'])
 
     @staticmethod
     def parse_list(data: List[Dict[str, Any]]) -> List['DentalInquiryResponse']:
