@@ -8,6 +8,8 @@ requests = "*"
 requests-mock = "*"
 pytest = "*"
 twine = "*"
+setuptools = "*"
+wheel = "*"
 
 [dev-packages]
 
